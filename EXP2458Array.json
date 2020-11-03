@@ -1,0 +1,26 @@
+{
+  "pipeline": {
+    "name": "EXP2458Array"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/downloadEXP2458Array/downloadArray.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/downloadEXP2458Array.git",
+          "name": "",
+          "branch": "master"
+        }
+      }
+    ]
+  }
+}
