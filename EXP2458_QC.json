@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "name": "EXP2458_QC"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/get_EXP2458_QC/EMEXP2458_QC.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/get_EXP2458_QC.git",
+          "name": "",
+          "branch": "main"
+        }
+      },
+      {
+        "pfs": {
+          "repo": "get_EXP2458",
+          "glob": "/"
+        }
+      }
+    ]
+  }
+}
