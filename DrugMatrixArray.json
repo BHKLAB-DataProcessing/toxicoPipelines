@@ -1,0 +1,26 @@
+{
+  "pipeline": {
+    "name": "DrugMatrixArray"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/downloadDrugMatrixArray/downloadArray.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/downloadDrugMatrixArray.git",
+          "name": "",
+          "branch": "main"
+        }
+      }
+    ]
+  }
+}
