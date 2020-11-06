@@ -1,0 +1,26 @@
+{
+  "pipeline": {
+    "name": "TGRArray"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/downloadTGGATEarray_rat/downloadArray.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/downloadTGGATEarray_rat.git",
+          "name": "",
+          "branch": "main"
+        }
+      }
+    ]
+  }
+}
