@@ -1,6 +1,6 @@
 {
   "pipeline": {
-    "name": "TGRArray"
+    "name": "TGRatArray"
   },
   "transform": {
     "image": "bhklab/toxicogx:v1",
