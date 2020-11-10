@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "name": "processTGHumanArray"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/processTGGATEarray_human/processArray.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "4G"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/processTGGATEarray_human.git",
+          "name": "",
+          "branch": "main"
+        }
+      },
+      {
+        "pfs": {
+          "repo": "TGHumanArray",
+          "glob": "/"
+        }
+      }
+    ]
+  }
+}
