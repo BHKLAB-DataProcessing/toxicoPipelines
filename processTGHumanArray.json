@@ -10,7 +10,7 @@
     },
   
   "resource_requests": {
-    "memory": "4G"
+    "memory": "6G"
   },
   "input": {
     "cross": [
