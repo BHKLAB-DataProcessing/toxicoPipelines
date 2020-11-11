@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "name": "getTG_rat"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/getTGGATE/getTG.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "1G"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/getTGGATE.git",
+          "name": "",
+          "branch": "main"
+        }
+      },
+      {
+        "pfs": {
+          "repo": "processTGRatArray",
+          "glob": "/"
+        }
+      }
+    ]
+  }
+}
