@@ -6,7 +6,7 @@
     "image": "bhklab/toxicogx:v1",
     "cmd": [
       "Rscript", 
-      "/pfs/getTGGATE/getTG.R"]
+      "/pfs/getTGGATE/getTG.R", "rat"]
     },
   
   "resource_requests": {
