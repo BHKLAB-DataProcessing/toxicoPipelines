@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "name": "getDrugMat"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/getDrugMatrix/getDM.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "100M"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/getDrugMatrix.git",
+          "name": "",
+          "branch": "main"
+        }
+      },
+      {
+        "pfs": {
+          "repo": "processDrugMatrixArray",
+          "glob": "/"
+        }
+      }
+    ]
+  }
+}
