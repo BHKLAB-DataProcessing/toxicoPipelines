@@ -1,0 +1,32 @@
+{
+  "pipeline": {
+    "name": "processDrugMatrixArray"
+  },
+  "transform": {
+    "image": "bhklab/toxicogx:v1",
+    "cmd": [
+      "Rscript", 
+      "/pfs/processDrugMatrixarray/processArray.R"]
+    },
+  
+  "resource_requests": {
+    "memory": "1G"
+  },
+  "input": {
+    "cross": [
+      {
+        "git": {
+          "url": "https://github.com/BHKLAB-Pachyderm/processDrugMatrixarray.git",
+          "name": "",
+          "branch": "main"
+        }
+      },
+      {
+        "pfs": {
+          "repo": "DrugMatrixArray",
+          "glob": "/"
+        }
+      }
+    ]
+  }
+}
