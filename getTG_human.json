@@ -3,7 +3,7 @@
     "name": "getTG_human"
   },
   "transform": {
-    "image": "bhklab/toxicogx:v1",
+    "image": "bhklab/toxicogx:v2",
     "cmd": [
       "Rscript", 
       "/pfs/getTGGATE/getTG.R", "human"]
