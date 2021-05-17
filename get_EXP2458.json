@@ -3,7 +3,7 @@
     "name": "get_EXP2458"
   },
   "transform": {
-    "image": "bhklab/toxicogx:v1",
+    "image": "bhklab/toxicogx:v3",
     "cmd": [
       "Rscript", 
       "/pfs/getEXP2458/getTset.R"]
